@@ -11,7 +11,7 @@ COPY . .
 RUN chmod +x ./gradlew
 
 # 5. Gradle 빌드 수행 (테스트 제외)
-RUN ./gradlew build -x test
+RUN ./gradlew build -x test --no-daemon --parallel
 
 # 6. 런타임을 위한 가벼운 JDK 이미지 사용
 FROM openjdk:17-jdk-slim
