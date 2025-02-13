@@ -1,0 +1,43 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '2.7.5'
+	id 'io.spring.dependency-management' version '1.1.4'
+	id 'war'
+}
+
+group = 'com.esgbbollock'
+version = '0.0.1-SNAPSHOT'
+
+java {
+
+/*	신은규 - ESG 버전
+    sourceCompatibility = '10'
+	targetCompatibility = '10'*/
+	
+	sourceCompatibility = '1.8'
+	targetCompatibility = '1.8'
+	
+	
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web:2.7.5'
+	implementation 'org.springframework.boot:spring-boot-starter-web-services:2.7.5'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'com.microsoft.sqlserver:mssql-jdbc:12.4.2.jre8'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools:2.7.5'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test:2.7.5'
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher:1.9.3'
+	
+	implementation group: 'com.microsoft.sqlserver', name: 'mssql-jdbc', version: '6.4.0.jre8'
+	
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
