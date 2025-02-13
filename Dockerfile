@@ -5,7 +5,7 @@ FROM openjdk:17-jdk-slim
 WORKDIR /app
 
 # 빌드된 WAR 파일을 컨테이너 내부로 복사
-COPY build/libs/ESGbollock-0.0.1-SNAPSHOT.war app.war
+COPY build/libs/ESGbbollock-0.0.1-SNAPSHOT.war app.war
 
 # Tomcat 포트 오픈 (Spring Boot 내장 서버 사용)
 EXPOSE 8080
