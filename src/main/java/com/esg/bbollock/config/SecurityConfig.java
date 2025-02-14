@@ -30,7 +30,7 @@ public class SecurityConfig {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         CorsConfiguration config = new CorsConfiguration();
         config.setAllowCredentials(true);  // 🔹 인증 정보 포함 허용
-        config.setAllowedOrigins(Arrays.asList("http://localhost:3000"));  // 🔹 React 프론트엔드 도메인
+        config.setAllowedOrigins(Arrays.asList("http://localhost:3000", "https://paulzzak.vercel.app"));  // 🔹 React 프론트엔드 도메인 + Vercel 도메인 추가
         config.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));  // 🔹 허용할 HTTP 메서드
         config.setAllowedHeaders(Arrays.asList("*"));  // 🔹 모든 헤더 허용
         source.registerCorsConfiguration("/**", config);
