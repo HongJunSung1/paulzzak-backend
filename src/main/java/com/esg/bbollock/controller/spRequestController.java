@@ -32,6 +32,13 @@ public class spRequestController {
 	
 	@Autowired
 	private comXmlService comXmlService;
+
+	
+	@RequestMapping("/")
+	public String serverInit() {
+		return "server Deploy Success";
+	}
+		
 	
 	@RequestMapping("/test")
 	public String test() {
