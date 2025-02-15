@@ -84,7 +84,7 @@ public class spRequestController {
 			e.printStackTrace();
 		}
 		
-//		System.out.println("EXEC "+ strSPName + " " + "'"+strComXml+"','"+strXml+"'");
+		System.out.println("EXEC "+ strSPName + " " + "'"+strComXml+"','"+strXml+"'");
 
 		returnData = comSqlService.comSQLService_Multi(strSPName,"'"+strComXml+"','"+strXml+"'");
 		
