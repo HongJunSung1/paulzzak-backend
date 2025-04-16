@@ -53,7 +53,7 @@ public class spRequestController {
     @GetMapping("/db-test")
     public String testDatabaseConnection() {
         try (Connection connection = dataSource.getConnection()) {
-            return "✅ Database Connection Successful!";
+            return "✅ Database Connection Successful!2";
         } catch (Exception e) {
             return "❌ Database Connection Failed: " + e.getMessage();
         }
@@ -74,6 +74,13 @@ public class spRequestController {
 		Map<String, Object> strComData = (Map<String, Object>) sendData.get(0).get("userInfo");
 		
 
+//	    try (Connection connection = dataSource.getConnection()) {
+//	        String dbUrl = connection.getMetaData().getURL();
+//	        System.out.println("🌐 현재 연결된 DB URL: {}: "+dbUrl);
+//	    } catch (Exception e) {
+//	    	System.out.println("❌ DB URL 확인 실패: {} : "+ e.getMessage());
+//	    }		
+//		
 		String strXml = "";
 		String strComXml = "";
 		try {
@@ -88,6 +95,7 @@ public class spRequestController {
 
 		returnData = comSqlService.comSQLService_Multi(strSPName,"'"+strComXml+"','"+strXml+"'");
 		
+//		System.out.println(returnData)
 		return returnData;
 	}
 

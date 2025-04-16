@@ -23,10 +23,9 @@ public class comSQLService {
 //	private String strPassWord = "esg1234";
 	
 	private String strDriver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";       
-	private String strUrl = "jdbc:sqlserver://paulzzak-db.c3ouguiq215l.ap-northeast-2.rds.amazonaws.com:1433;databaseName=paulzzak;encrypt=false;trustServerCertificate=true";
+	private String strUrl = "jdbc:sqlserver://paulzzak-db-small.c3ouguiq215l.ap-northeast-2.rds.amazonaws.com:1433;databaseName=paulzzak;encrypt=false;trustServerCertificate=true";
 	private String strUserID = "admin";
-	private String strPassWord = "ghdwnstjd1!";
-	
+	private String strPassWord = "dksemffla1!";
 
 	public List<Map<String, Object>> comSQLService_Single(String spName, String param) {
 
