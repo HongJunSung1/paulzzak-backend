@@ -68,7 +68,7 @@ public class spRequestController {
 
 		List<List<Map<String, Object>>> returnData = new ArrayList<List<Map<String, Object>>>();
 //		System.out.println("sendData : " + sendData);
-		
+
 		String strSPName = (String) sendData.get(0).get("SpName");
 		List<Map<String, Object>> strSendData = (List<Map<String, Object>>) sendData.get(0).get("sendData");
 		Map<String, Object> strComData = (Map<String, Object>) sendData.get(0).get("userInfo");
@@ -92,7 +92,7 @@ public class spRequestController {
 		}
 		
 		System.out.println("EXEC "+ strSPName + " " + "'"+strComXml+"','"+strXml+"'");
-
+		
 		returnData = comSqlService.comSQLService_Multi(strSPName,"'"+strComXml+"','"+strXml+"'");
 		
 //		System.out.println(returnData)
